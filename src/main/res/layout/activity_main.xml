@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_wave_11" />
+
+    <ImageView
+        android:id="@+id/Firebase"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:src="@drawable/firebaseicon" />
+
+    <TextView
+        android:id="@+id/DocumentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Firebase"
+        android:layout_marginStart="10dp"
+        android:text="Document Details"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/DocumentIDET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DocumentID"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/pic_layout"
+        android:hint="Enter Document ID"
+        android:inputType="text"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/CityNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DocumentIDET"
+        android:layout_marginStart="10dp"
+        android:text="City Name"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/CityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CityNameID"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/pic_layout"
+        android:hint="Enter City Name"
+        android:inputType="text"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/CityDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CityName"
+        android:layout_marginStart="10dp"
+        android:text="City Details"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/DetailsET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CityDetails"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/pic_layout"
+        android:hint="Enter City Details"
+        android:inputType="text"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DetailsET"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_layout"
+        android:onClick="addValues"
+        android:text="Enter Data"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/UpdateButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DetailsET"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_layout"
+        android:onClick="update"
+        android:text="Update Data"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/Read"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Button"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_layout"
+        android:onClick="getData"
+        android:text="Get Data"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/Delete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UpdateButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_layout"
+        android:onClick="Remove"
+        android:text="Delete"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/Collection"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Read"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_layout"
+        android:onClick="getCollection"
+        android:text="Get Collection"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/DeleteCollection"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Delete"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_layout"
+        android:onClick="RemoveCollection"
+        android:text="Remove All"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/GetDataTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Collection"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="getData"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_wave_10" />
+
+</RelativeLayout>
